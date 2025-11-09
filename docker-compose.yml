@@ -1,0 +1,13 @@
+services:
+  purple-ai-homepage:
+    image: purpleai_web_renewal:1.0.0
+    container_name: purpleai_web_renewal_dc
+    environment:
+      - TZ=Asia/Seoul
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - "9001:9001"
+    volumes:
+      - ./logs:/app/logs
