@@ -16,7 +16,9 @@ export default function ContactUsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] via-[#1a1a2e] to-[#0a0a1a]">
       <Suspense fallback={<TestDriveForm language="en" />}>
-        <ContactUsContent />
+        <div className="mt-24">
+          <ContactUsContent />
+        </div>
       </Suspense>
     </div>
   );

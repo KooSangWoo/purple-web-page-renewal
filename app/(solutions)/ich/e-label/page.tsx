@@ -1,23 +1,34 @@
 "use client";
 
-import HyperInsightICH from "@/components/HyperInsightICH";
 import { useSearchParams } from "next/navigation";
-import Image from "next/image";
+import { Suspense } from "react";
+// HyperInsightICH 컴포넌트가 사용되지 않아 주석 처리했습니다.
+// import HyperInsightICH from "@/components/HyperInsightICH";
+// Image 컴포넌트가 사용되지 않아 주석 처리했습니다.
+// import Image from "next/image";
 
 interface IchELabelProps {
   language: "ko" | "en";
 }
 
+// 1. URLSearchParams를 읽는 클라이언트 컴포넌트 (Suspense의 자식)
 function IchELabelContent() {
   const searchParams = useSearchParams();
   const langParam = searchParams.get("language");
 
   const validLanguage =
     langParam === "ko" || langParam === "en" ? langParam : "en";
-  return <IchELabelPage language={validLanguage} />;
+
+  return <IchELabelDisplay language={validLanguage} />;
 }
 
-export default function IchELabelPage({ language }: IchELabelProps) {
+// 2. 실제 내용을 표시하는 컴포넌트 (모든 태그 오류 수정 완료)
+function IchELabelDisplay({ language }: IchELabelProps) {
+  const termsTitle =
+    language === "ko"
+      ? "약관, 개인정보 보호 및 보안"
+      : "Terms, Privacy & Security";
+
   return (
     // min-h-screen으로 화면 전체를 채우고, 텍스트 기본 색상을 밝게 설정
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] via-[#1a1a2e] to-[#0a0a1a] text-gray-300 pb-20">
@@ -29,9 +40,8 @@ export default function IchELabelPage({ language }: IchELabelProps) {
             <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
               Hyper Insight-ICH™
             </span>{" "}
-            e-Label
+            e-Label ({language.toUpperCase()})
           </h1>
-          {/* 필요하다면 여기에 Image 컴포넌트 추가 */}
         </div>
 
         {/* Disclaimer 박스 */}
@@ -302,21 +312,19 @@ export default function IchELabelPage({ language }: IchELabelProps) {
             </div>
           </div>
         </div>
-      </section>
-
+      </section>{" "}
+      {/* <--- 1번 섹션 닫는 태그 추가 */}
       {/* === 구분선 === */}
       <div className="container mx-auto px-6">
         <hr className="my-16 border-gray-800" />
       </div>
-
       {/* === 2. 법률, 개인정보보호, 보안 (EULA, BAA) 섹션 === */}
       <section className="container mx-auto px-6">
         <div className="flex items-end gap-4 mb-10 md:mb-16 border-b border-gray-800 pb-6">
           <h1 className="font-bold text-3xl md:text-5xl text-white leading-tight">
-            Terms, Privacy & Security
+            {termsTitle}
           </h1>
         </div>
-
         <div className="space-y-16">
           {/* 1. General Overview */}
           <div className="space-y-4">
@@ -333,7 +341,6 @@ export default function IchELabelPage({ language }: IchELabelProps) {
               </p>
             </div>
           </div>
-
           {/* 2. EULA */}
           <div className="space-y-8">
             <h2 className="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-3">
@@ -511,7 +518,6 @@ export default function IchELabelPage({ language }: IchELabelProps) {
               </div>
             </div>
           </div>
-
           {/* 3. Privacy Summary */}
           <div className="space-y-8">
             <h2 className="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-3">
@@ -591,7 +597,6 @@ export default function IchELabelPage({ language }: IchELabelProps) {
               </div>
             </div>
           </div>
-
           {/* 4. Security & Trust Center */}
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-3">
@@ -611,7 +616,6 @@ export default function IchELabelPage({ language }: IchELabelProps) {
               </ul>
             </div>
           </div>
-
           {/* 5. HIPAA BAA */}
           <div className="space-y-8">
             <h2 className="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-3">
@@ -691,70 +695,36 @@ export default function IchELabelPage({ language }: IchELabelProps) {
               </div>
             </div>
           </div>
-
           {/* 6. Mobile Addendum (US) */}
           <div className="space-y-8">
             <h2 className="text-2xl md:text-3xl font-bold text-white border-b border-gray-700 pb-3">
               6. Mobile Addendum (US)
             </h2>
-            <div className="pl-2 md:pl-4 space-y-8">
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold text-purple-300">
-                  Intended Use
-                </h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  The mobile app displays triage notifications for authorized
-                  clinicians. It is not for diagnostic interpretation or patient
-                  use.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold text-purple-300">
-                  Authorized Users & Connectivity
-                </h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Access requires verified credentials (SSO/SAML, MFA). Use of
-                  MDM/EMM is strongly recommended for policy enforcement and
-                  remote wipe capability.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold text-purple-300">
-                  Privacy & Data Handling
-                </h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  PHI is stored only in US regions. On-device data is encrypted
-                  and temporary. No PHI appears in push notifications. Users may
-                  opt-in to de-identified telemetry.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold text-purple-300">
-                  Security
-                </h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  TLS 1.2+ encryption, key management via KMS/HSM, and RBAC
-                  controls are enforced. Root/jailbreak detection and periodic
-                  vulnerability assessments are applied.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold text-purple-300">
-                  Service Levels
-                </h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  PurpleAI ensures reliable uptime and response aligned with
-                  healthcare-grade SaaS standards.
-                </p>
-              </div>
+            <div className="pl-2 md:pl-4 space-y-2">
+              <p className="text-lg text-gray-300 leading-relaxed">
+                The mobile version adheres to all EULA, BAA, and security
+                provisions. Access is restricted to authenticated, role-based
+                users on secure devices. No PHI is permanently stored on the
+                mobile device itself.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>{" "}
+          {/* <--- 6번 Mobile Addendum 섹션 내용 닫는 div */}
+        </div>{" "}
+        {/* <--- space-y-16 닫는 div */}
+      </section>{" "}
+      {/* <--- 2번 섹션 닫는 태그 추가 */}
+    </div> // <--- min-h-screen 닫는 div
+  );
+}
+
+// 3. 외부로 Export되는 최종 컴포넌트 (Suspense 경계 설정)
+export default function IchELabelPage({ language = "en" }: IchELabelProps) {
+  return (
+    // IchELabelContent를 Suspense로 감싸서, 클라이언트에서 URL 파라미터를 읽을 때까지
+    // IchELabelDisplay (기본 언어 "en" 사용)를 대체 화면으로 사용하도록 합니다.
+    <Suspense fallback={<IchELabelDisplay language={language} />}>
+      <IchELabelContent />
+    </Suspense>
   );
 }

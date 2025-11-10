@@ -94,15 +94,6 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                     ICH Dx*
                   </span>
                 </h1>
-                {/* TODO : E-label 클릭 이벤트에 대한 기존 말풍선 컴포넌트는 적용여부 확인 후 삽입 */}
-                <Image
-                  src="/images/ich_eLabel_comment.png"
-                  alt="Purple AI"
-                  width={400} // 필요한 너비로 조절. 높이는 w-auto에 맞춰서 자동으로 조절됨
-                  height={1} // height 값은 w-auto로 인해 무시되지만, 명시적으로 1을 줘서 에러 방지
-                  className="ml-12 h-10 md:h-12 lg:h-16 w-auto cursor-pointer hover:scale-110 hover:shadow-lg" // 이미지의 높이를 키우고 싶다면 이 h-값을 조절
-                  onClick={handleELabel}
-                />
               </div>
               <p className="text-white/70 leading-relaxed max-w-5xl">
                 {t.description}
@@ -127,9 +118,9 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 {/* Image Container */}
                 <div className="bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1490223966554-5de0fd551b91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwd29ya2xpc3QlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzYyNDc3OTcwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src="/images/ich_worklist.png"
                     alt="Worklist Interface"
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-contain rounded-xl"
                   />
                 </div>
 
@@ -149,9 +140,9 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 {/* Image Container */}
                 <div className="bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1549925245-f20a1bac6454?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMENUJTIwc2NhbiUyMHZpZXdlcnxlbnwxfHx8fDE3NjI0Nzc5NzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src="/images/MASTER_HEMORRAGE_251028.jpg"
                     alt="CT Scan Viewer"
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-contain rounded-xl"
                   />
                 </div>
 
@@ -171,9 +162,9 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 {/* Image Container */}
                 <div className="bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1758691462814-485c3672e447?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwcmVwb3J0JTIwZG9jdW1lbnR8ZW58MXx8fHwxNzYyNDA1Njk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src="/images/report_brain_hemorrhage.png"
                     alt="Medical Report"
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-contain rounded-xl"
                   />
                 </div>
 
@@ -191,11 +182,16 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Image Container */}
-                <div className="bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
+                <div className="flex bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1663153206213-d45285ce3fe2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBtZWRpY2FsJTIwYXBwfGVufDF8fHx8MTc2MjQ3Nzk3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src="/images/mobile_1.jpg"
                     alt="Mobile Medical App"
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                  <ImageWithFallback
+                    src="/images/mobile_2.jpg"
+                    alt="Mobile Medical App"
+                    className="w-full h-full object-contain rounded-xl"
                   />
                 </div>
 
@@ -238,18 +234,37 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
           {activeTab === "us" && (
             <div className="space-y-12">
               {/* US Clinical Validation Header */}
-              <div className="flex items-center gap-4 pb-6 border-b border-purple-500/30">
-                <span className="text-4xl">🇺🇸</span>
-                <h2 className="text-purple-400">US CLINICAL VALIDATION</h2>
-              </div>
+              <div className="flex flex-row justify-between items-center w-full">
+                {/* 1. 이 div가 QR 코드까지의 모든 공간을 차지하며, 밑줄이 적용됩니다. */}
+                <div className="flex flex-col w-full pr-8">
+                  {" "}
+                  {/* w-full로 최대한 확장하고, pr-8로 QR코드와 간격 확보 */}
+                  {/* 텍스트 영역 */}
+                  <div className="flex items-center gap-4">
+                    <span className="text-4xl">🇺🇸</span>
+                    <h2 className="text-purple-400">US CLINICAL VALIDATION</h2>
+                  </div>
+                  {/* 밑줄 (텍스트 + QR 간격까지 연장) */}
+                  {/* pb-6은 밑줄과 아래 텍스트 사이의 간격입니다. border-b가 w-full에 의해 확장됩니다. */}
+                  <div className="mt-2 pb-6 border-b border-purple-500/30 w-full"></div>
+                </div>
 
+                {/* 2. QR 코드 이미지 (오른쪽 끝에 배치) */}
+                <Image
+                  src="/images/ich_eLabel_comment.png"
+                  alt="Purple AI"
+                  width={400}
+                  height={1}
+                  className="h-24 w-auto cursor-pointer hover:scale-110 hover:shadow-lg"
+                  onClick={handleELabel}
+                />
+              </div>
               {/* Description */}
               <p className="text-white/70 leading-relaxed">
                 A multi-center, randomized, retrospective crossover superiority
                 pivotal study, demonstrating high performance across all major
                 ICH subtypes.
               </p>
-
               {/* Performance Metrics */}
               <div>
                 <h3 className="text-orange-400 mb-6">Performance Metrics</h3>
@@ -348,7 +363,6 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                   </div>
                 </div>
               </div>
-
               {/* Publication Reference */}
               <div className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 backdrop-blur-xl rounded-2xl p-6 border border-purple-500/20">
                 <h4 className="text-cyan-400 mb-3">
@@ -359,7 +373,6 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                   intracranial haemorrhage: a pivotal randomized clinical trial
                 </p>
               </div>
-
               {/* Comparison vs. Peers */}
               <div>
                 <h3 className="text-orange-400 mb-6">Comparison vs. Peers</h3>
@@ -722,7 +735,7 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                         className="bg-black/40 rounded-lg aspect-square"
                       >
                         <ImageWithFallback
-                          src={`https://images.unsplash.com/photo-1549925245-f20a1bac6454?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFpbiUyMENUJTIwc2NhbiUyMHZpZXdlcnxlbnwxfHx8fDE3NjI0Nzc5NzB8MA&ixlib=rb-4.1.0&q=80&w=400`}
+                          src={`/images/brainct_hemo_${i}.png`}
                           alt={`CT Scan ${i}`}
                           className="w-full h-full object-cover rounded-lg"
                         />

@@ -1,133 +1,318 @@
-import { Handshake, Building2, TrendingUp, Plus } from 'lucide-react';
+import { Handshake, Building2, TrendingUp, Plus } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface PartnersPageProps {
-  language: 'ko' | 'en';
+  language: "ko" | "en";
 }
 
 export default function PartnersPage({ language }: PartnersPageProps) {
   const content = {
     ko: {
       hero: {
-        subtitle: 'PARTNERS',
-        title: 'Our Partners',
-        description: 'Building the future of AI healthcare together with leading institutions, strategic partners, and visionary investors.',
+        subtitle: "PARTNERS",
+        title: "Our Partners",
+        description:
+          "Building the future of AI healthcare together with leading institutions, strategic partners, and visionary investors.",
       },
       sections: {
         collaborators: {
-          title: 'Research Collaborators & Customers',
-          subtitle: 'Leading medical institutions and healthcare organizations',
-          description: 'We collaborate with top-tier hospitals and research institutions to develop and deploy cutting-edge AI solutions.',
+          title: "Research Collaborators & Customers",
+          subtitle: "Leading medical institutions and healthcare organizations",
+          description:
+            "We collaborate with top-tier hospitals and research institutions to develop and deploy cutting-edge AI solutions.",
         },
         strategic: {
-          title: 'Strategic Business Partners',
-          subtitle: 'Technology and business alliances',
-          description: 'Strategic partnerships that amplify our reach and enhance our technological capabilities.',
+          title: "Strategic Business Partners",
+          subtitle: "Technology and business alliances",
+          description:
+            "Strategic partnerships that amplify our reach and enhance our technological capabilities.",
         },
         investors: {
-          title: 'Financial Investors',
-          subtitle: 'Backing innovation in healthcare AI',
-          description: 'Visionary investors supporting our mission to transform cerebrovascular care.',
+          title: "Financial Investors",
+          subtitle: "Backing innovation in healthcare AI",
+          description:
+            "Visionary investors supporting our mission to transform cerebrovascular care.",
         },
       },
       // Research Collaborators & Customers (20+ logos)
       collaborators: [
-        { name: 'Asan Medical Center', category: 'Major Hospital' },
-        { name: 'Seoul National University Hospital', category: 'Major Hospital' },
-        { name: 'Ajou University Hospital', category: 'Major Hospital' },
-        { name: 'Samsung Medical Center', category: 'Major Hospital' },
-        { name: 'Severance Hospital', category: 'Major Hospital' },
-        { name: 'Seoul St. Mary\'s Hospital', category: 'Major Hospital' },
-        { name: 'Bundang Seoul National University Hospital', category: 'Major Hospital' },
-        { name: 'Gangnam Severance Hospital', category: 'Major Hospital' },
-        { name: 'Kyungpook National University Hospital', category: 'Major Hospital' },
-        { name: 'Chonnam National University Hospital', category: 'Major Hospital' },
-        { name: 'Pusan National University Hospital', category: 'Major Hospital' },
-        { name: 'Chungnam National University Hospital', category: 'Major Hospital' },
-        { name: 'Hanyang University Hospital', category: 'Major Hospital' },
-        { name: 'Korea University Anam Hospital', category: 'Major Hospital' },
-        { name: 'Ewha Womans University Medical Center', category: 'Major Hospital' },
-        { name: 'Hallym University Medical Center', category: 'Major Hospital' },
-        { name: 'Inha University Hospital', category: 'Major Hospital' },
-        { name: 'Chung-Ang University Hospital', category: 'Major Hospital' },
-        { name: 'Soonchunhyang University Hospital', category: 'Major Hospital' },
-        { name: 'Konkuk University Medical Center', category: 'Major Hospital' },
-        { name: 'Dongguk University Ilsan Hospital', category: 'Major Hospital' },
-        { name: 'Gachon University Gil Medical Center', category: 'Major Hospital' },
+        {
+          name: "Asan Medical Center",
+          category: "Major Hospital",
+          filePath: "/images/partners/GAH.png",
+        },
+        {
+          name: "Seoul National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/SNUH.png",
+        },
+        {
+          name: "Ajou University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/AUH.png",
+        },
+        {
+          name: "Samsung Medical Center",
+          category: "Major Hospital",
+          filePath: "/images/partners/SCH.png",
+        },
+        {
+          name: "Severance Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Seoul St. Mary's Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Bundang Seoul National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/SNUBH.png",
+        },
+        {
+          name: "Gangnam Severance Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Kyungpook National University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Chonnam National University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Pusan National University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Chungnam National University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Hanyang University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Korea University Anam Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Ewha Womans University Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Hallym University Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Inha University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Chung-Ang University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Soonchunhyang University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Konkuk University Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Dongguk University Ilsan Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Gachon University Gil Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
       ],
       // Strategic Business Partners (3 logos)
       strategic: [
-        { name: 'Yuhan Medical', category: 'Medical Equipment' },
-        { name: 'Microsoft Azure', category: 'Cloud Platform' },
-        { name: 'SK C&C', category: 'Technology Partner' },
+        { name: "Yuhan Medical", category: "Medical Equipment" },
+        { name: "Microsoft Azure", category: "Cloud Platform" },
+        { name: "SK C&C", category: "Technology Partner" },
       ],
       // Financial Investors (4 logos)
       investors: [
-        { name: 'SK Group', category: 'Strategic Investor' },
-        { name: 'Korea Investment Partners', category: 'Venture Capital' },
-        { name: 'Mirae Asset Venture', category: 'Venture Capital' },
-        { name: 'KB Investment', category: 'Strategic Investor' },
+        { name: "SK Group", category: "Strategic Investor" },
+        { name: "Korea Investment Partners", category: "Venture Capital" },
+        { name: "Mirae Asset Venture", category: "Venture Capital" },
+        { name: "KB Investment", category: "Strategic Investor" },
       ],
     },
     en: {
       hero: {
-        subtitle: 'PARTNERS',
-        title: 'Our Partners',
-        description: 'Building the future of AI healthcare together with leading institutions, strategic partners, and visionary investors.',
+        subtitle: "PARTNERS",
+        title: "Our Partners",
+        description:
+          "Building the future of AI healthcare together with leading institutions, strategic partners, and visionary investors.",
       },
       sections: {
         collaborators: {
-          title: 'Research Collaborators & Customers',
-          subtitle: 'Leading medical institutions and healthcare organizations',
-          description: 'We collaborate with top-tier hospitals and research institutions to develop and deploy cutting-edge AI solutions.',
+          title: "Research Collaborators & Customers",
+          subtitle: "Leading medical institutions and healthcare organizations",
+          description:
+            "We collaborate with top-tier hospitals and research institutions to develop and deploy cutting-edge AI solutions.",
         },
         strategic: {
-          title: 'Strategic Business Partners',
-          subtitle: 'Technology and business alliances',
-          description: 'Strategic partnerships that amplify our reach and enhance our technological capabilities.',
+          title: "Strategic Business Partners",
+          subtitle: "Technology and business alliances",
+          description:
+            "Strategic partnerships that amplify our reach and enhance our technological capabilities.",
         },
         investors: {
-          title: 'Financial Investors',
-          subtitle: 'Backing innovation in healthcare AI',
-          description: 'Visionary investors supporting our mission to transform cerebrovascular care.',
+          title: "Financial Investors",
+          subtitle: "Backing innovation in healthcare AI",
+          description:
+            "Visionary investors supporting our mission to transform cerebrovascular care.",
         },
       },
       // Research Collaborators & Customers (20+ logos)
       collaborators: [
-        { name: 'Asan Medical Center', category: 'Major Hospital' },
-        { name: 'Seoul National University Hospital', category: 'Major Hospital' },
-        { name: 'Ajou University Hospital', category: 'Major Hospital' },
-        { name: 'Samsung Medical Center', category: 'Major Hospital' },
-        { name: 'Severance Hospital', category: 'Major Hospital' },
-        { name: 'Seoul St. Mary\'s Hospital', category: 'Major Hospital' },
-        { name: 'Bundang Seoul National University Hospital', category: 'Major Hospital' },
-        { name: 'Gangnam Severance Hospital', category: 'Major Hospital' },
-        { name: 'Kyungpook National University Hospital', category: 'Major Hospital' },
-        { name: 'Chonnam National University Hospital', category: 'Major Hospital' },
-        { name: 'Pusan National University Hospital', category: 'Major Hospital' },
-        { name: 'Chungnam National University Hospital', category: 'Major Hospital' },
-        { name: 'Hanyang University Hospital', category: 'Major Hospital' },
-        { name: 'Korea University Anam Hospital', category: 'Major Hospital' },
-        { name: 'Ewha Womans University Medical Center', category: 'Major Hospital' },
-        { name: 'Hallym University Medical Center', category: 'Major Hospital' },
-        { name: 'Inha University Hospital', category: 'Major Hospital' },
-        { name: 'Chung-Ang University Hospital', category: 'Major Hospital' },
-        { name: 'Soonchunhyang University Hospital', category: 'Major Hospital' },
-        { name: 'Konkuk University Medical Center', category: 'Major Hospital' },
-        { name: 'Dongguk University Ilsan Hospital', category: 'Major Hospital' },
-        { name: 'Gachon University Gil Medical Center', category: 'Major Hospital' },
+        {
+          name: "Asan Medical Center",
+          category: "Major Hospital",
+          filePath: "/images/partners/GAH.png",
+        },
+        {
+          name: "Seoul National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/SNUH.png",
+        },
+        {
+          name: "Ajou University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/AUH.png",
+        },
+        {
+          name: "Samsung Medical Center",
+          category: "Major Hospital",
+          filePath: "/images/partners/SCH.png",
+        },
+        {
+          name: "Severance Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/SEVERANCE_HOS.png",
+        },
+        {
+          name: "Seoul St. Mary's Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/SCMC.png",
+        },
+        {
+          name: "Bundang Seoul National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/SNUBH.png",
+        },
+        {
+          name: "Gangnam Severance Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/GANGNAM_SEVERANCE_HOS.jpeg",
+        },
+        {
+          name: "Kyungpook National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/KNUH.png",
+        },
+        {
+          name: "Chonnam National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/CNUH.png",
+        },
+        {
+          name: "Pusan National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/PNUH.png",
+        },
+        {
+          name: "Chungnam National University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/CNU.svg",
+        },
+        {
+          name: "Hanyang University Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/HYU.svg",
+        },
+        {
+          name: "Korea University Anam Hospital",
+          category: "Major Hospital",
+          filePath: "/images/partners/KUM.s",
+        },
+        {
+          name: "Ewha Womans University Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Hallym University Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Inha University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Chung-Ang University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Soonchunhyang University Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Konkuk University Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Dongguk University Ilsan Hospital",
+          category: "Major Hospital",
+          filePath: "",
+        },
+        {
+          name: "Gachon University Gil Medical Center",
+          category: "Major Hospital",
+          filePath: "",
+        },
       ],
       // Strategic Business Partners (3 logos)
       strategic: [
-        { name: 'Yuhan Medical', category: 'Medical Equipment' },
-        { name: 'Microsoft Azure', category: 'Cloud Platform' },
-        { name: 'SK C&C', category: 'Technology Partner' },
+        { name: "Yuhan Medical", category: "Medical Equipment" },
+        { name: "Microsoft Azure", category: "Cloud Platform" },
+        { name: "SK C&C", category: "Technology Partner" },
       ],
       // Financial Investors (4 logos)
       investors: [
-        { name: 'SK Group', category: 'Strategic Investor' },
-        { name: 'Korea Investment Partners', category: 'Venture Capital' },
-        { name: 'Mirae Asset Venture', category: 'Venture Capital' },
-        { name: 'KB Investment', category: 'Strategic Investor' },
+        { name: "SK Group", category: "Strategic Investor" },
+        { name: "Korea Investment Partners", category: "Venture Capital" },
+        { name: "Mirae Asset Venture", category: "Venture Capital" },
+        { name: "KB Investment", category: "Strategic Investor" },
       ],
     },
   };
@@ -135,22 +320,35 @@ export default function PartnersPage({ language }: PartnersPageProps) {
   const t = content[language];
 
   // Partner Logo Card Component
-  const PartnerCard = ({ name, category, large = false }: { name: string; category: string; large?: boolean }) => (
+  const PartnerCard = ({
+    name,
+    category,
+    imagePath,
+    large = false,
+  }: {
+    name: string;
+    category: string;
+    imagePath: string;
+    large?: boolean;
+  }) => (
     <div
       className={`bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-purple-500/40 transition-all group ${
-        large ? 'p-8' : 'p-6'
+        large ? "p-8" : "p-6"
       }`}
     >
       <div className="flex flex-col items-center justify-center h-full text-center">
         {/* Logo Placeholder - Replace with actual logo */}
         <div
           className={`${
-            large ? 'w-24 h-24' : 'w-20 h-20'
+            large ? "w-24 h-24" : "w-20 h-20"
           } rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
         >
-          <Building2 className={`${large ? 'w-12 h-12' : 'w-10 h-10'} text-purple-400`} />
+          <Building2
+            className={`${large ? "w-12 h-12" : "w-10 h-10"} text-purple-400`}
+          />
+          <ImageWithFallback src={imagePath} alt="logoImage" />
         </div>
-        <h3 className={`text-white mb-2 ${large ? '' : 'text-sm'}`}>{name}</h3>
+        <h3 className={`text-white mb-2 ${large ? "" : "text-sm"}`}>{name}</h3>
         <span className="text-purple-400 text-xs px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20">
           {category}
         </span>
@@ -189,8 +387,12 @@ export default function PartnersPage({ language }: PartnersPageProps) {
                 <Building2 className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-purple-400">{t.sections.collaborators.title}</h2>
-                <p className="text-white/60">{t.sections.collaborators.subtitle}</p>
+                <h2 className="text-purple-400">
+                  {t.sections.collaborators.title}
+                </h2>
+                <p className="text-white/60">
+                  {t.sections.collaborators.subtitle}
+                </p>
               </div>
             </div>
             <p className="text-white/70 max-w-3xl leading-relaxed">
@@ -201,9 +403,14 @@ export default function PartnersPage({ language }: PartnersPageProps) {
           {/* Grid for 20+ partners - easily scalable */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {t.collaborators.map((partner, index) => (
-              <PartnerCard key={index} name={partner.name} category={partner.category} />
+              <PartnerCard
+                key={index}
+                name={partner.name}
+                imagePath={partner.filePath}
+                category={partner.category}
+              />
             ))}
-            
+
             {/* Add More Card */}
             <div className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 backdrop-blur-xl rounded-2xl border border-purple-500/20 border-dashed p-6 flex flex-col items-center justify-center text-center hover:border-purple-500/40 transition-all cursor-pointer group">
               <div className="w-20 h-20 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-all">
@@ -252,7 +459,12 @@ export default function PartnersPage({ language }: PartnersPageProps) {
           {/* Grid for 3 strategic partners - larger cards */}
           <div className="grid md:grid-cols-3 gap-6">
             {t.strategic.map((partner, index) => (
-              <PartnerCard key={index} name={partner.name} category={partner.category} large={true} />
+              <PartnerCard
+                key={index}
+                name={partner.name}
+                category={partner.category}
+                large={true}
+              />
             ))}
           </div>
 
@@ -265,8 +477,13 @@ export default function PartnersPage({ language }: PartnersPageProps) {
                   <Building2 className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
-                  <h4 className="text-white mb-1">Medical Equipment Integration</h4>
-                  <p className="text-white/60 text-sm">Seamless integration with leading PACS and medical imaging systems</p>
+                  <h4 className="text-white mb-1">
+                    Medical Equipment Integration
+                  </h4>
+                  <p className="text-white/60 text-sm">
+                    Seamless integration with leading PACS and medical imaging
+                    systems
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -275,7 +492,9 @@ export default function PartnersPage({ language }: PartnersPageProps) {
                 </div>
                 <div>
                   <h4 className="text-white mb-1">Cloud Infrastructure</h4>
-                  <p className="text-white/60 text-sm">Global deployment powered by Microsoft Azure</p>
+                  <p className="text-white/60 text-sm">
+                    Global deployment powered by Microsoft Azure
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -284,7 +503,9 @@ export default function PartnersPage({ language }: PartnersPageProps) {
                 </div>
                 <div>
                   <h4 className="text-white mb-1">Strategic Backing</h4>
-                  <p className="text-white/60 text-sm">Supported by SK C&C\'s healthcare technology expertise</p>
+                  <p className="text-white/60 text-sm">
+                    Supported by SK C&C\'s healthcare technology expertise
+                  </p>
                 </div>
               </div>
             </div>
@@ -301,7 +522,9 @@ export default function PartnersPage({ language }: PartnersPageProps) {
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-purple-400">{t.sections.investors.title}</h2>
+                <h2 className="text-purple-400">
+                  {t.sections.investors.title}
+                </h2>
                 <p className="text-white/60">{t.sections.investors.subtitle}</p>
               </div>
             </div>
@@ -313,7 +536,13 @@ export default function PartnersPage({ language }: PartnersPageProps) {
           {/* Grid for 4 investors - larger cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.investors.map((investor, index) => (
-              <PartnerCard key={index} name={investor.name} category={investor.category} large={true} />
+              <PartnerCard
+                key={index}
+                name={investor.name}
+                category={investor.category}
+                imagePath={investor.filePath}
+                large={true}
+              />
             ))}
           </div>
 
@@ -321,20 +550,29 @@ export default function PartnersPage({ language }: PartnersPageProps) {
           <div className="mt-12 bg-gradient-to-r from-purple-900/30 to-cyan-900/30 backdrop-blur-xl rounded-3xl border border-purple-500/30 p-12 text-center">
             <h3 className="text-white mb-4">Backed by Leading Investors</h3>
             <p className="text-white/70 max-w-3xl mx-auto leading-relaxed mb-8">
-              Our investors believe in our mission to transform cerebrovascular healthcare through AI innovation. Their support enables us to accelerate research, expand our reach, and deliver life-saving solutions to medical professionals worldwide.
+              Our investors believe in our mission to transform cerebrovascular
+              healthcare through AI innovation. Their support enables us to
+              accelerate research, expand our reach, and deliver life-saving
+              solutions to medical professionals worldwide.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
                 <div className="text-purple-400 mb-1">Strong Capital</div>
-                <p className="text-white/60 text-sm">Funded for sustained growth and innovation</p>
+                <p className="text-white/60 text-sm">
+                  Funded for sustained growth and innovation
+                </p>
               </div>
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
                 <div className="text-cyan-400 mb-1">Strategic Guidance</div>
-                <p className="text-white/60 text-sm">Leveraging investor expertise and networks</p>
+                <p className="text-white/60 text-sm">
+                  Leveraging investor expertise and networks
+                </p>
               </div>
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
                 <div className="text-purple-400 mb-1">Market Validation</div>
-                <p className="text-white/60 text-sm">Proven business model and growth trajectory</p>
+                <p className="text-white/60 text-sm">
+                  Proven business model and growth trajectory
+                </p>
               </div>
             </div>
           </div>
