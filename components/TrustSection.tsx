@@ -7,10 +7,7 @@ interface TrustSectionProps {
   language: "ko" | "en";
 }
 
-export default function TrustSection({
-  language,
-}: TrustSectionProps) {
-
+export default function TrustSection({ language }: TrustSectionProps) {
   const content = {
     ko: {
       title: "Trusted Partner",
@@ -35,48 +32,158 @@ export default function TrustSection({
   // Research Collaborators & Customers (hospitals and research institutions)
   const researchPartners = [
     {
-      id: "snuh",
-      name: "Seoul National University Hospital",
-      logo: "/figma/aad06b0a3574be16f998da2bc63904c43557b401.png",
+      id: "Asan Medical Center",
+      name: "Major Hospital",
+      logo: "/images/partners/GAH.png",
     },
     {
-      id: "korea-univ",
-      name: "Korea University Hospital",
-      logo: "/figma/248c151b3983672f440cfbc6ea9bc97c3659f4e1.png",
+      id: "Seoul National University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/SNUH.jpg",
     },
     {
-      id: "severance",
-      name: "Severance Hospital",
-      logo: "/figma/70f3393987af8287c4f8eda0c98e5049e4a4b7f1.png",
+      id: "Ajou University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/AUH.svg",
     },
     {
-      id: "knuh",
-      name: "Kyungpook National University Hospital",
-      logo: "/figma/7af9bc006865a28a6934e5d1f7a6322557be61aa.png",
+      id: "Samsung Medical Center",
+      name: "Major Hospital",
+      logo: "/images/partners/SCH.png",
     },
     {
-      id: "cha",
-      name: "CHA University Bundang Medical Center",
-      logo: "/figma/8b72c515a4a1102ea4adb95823a565ea28063461.png",
+      id: "Severance Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/SEVERANCE_HOS.png",
+    },
+    {
+      id: "Seoul St. Mary's Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/SCMC.png",
+    },
+    {
+      id: "Bundang Seoul National University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/SNUBH.jpeg",
+    },
+    {
+      id: "Gangnam Severance Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/GANGNAM_SEVERANCE_HOS.jpeg",
+    },
+    {
+      id: "Kyungpook National University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/KNUH.jpg",
+    },
+    {
+      id: "Chonnam National University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/CNUH.jpg",
+    },
+    {
+      id: "Pusan National University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/PNUH.jpeg",
+    },
+    {
+      id: "Chungnam National University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/CNU.svg",
+    },
+    {
+      id: "Hanyang University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/HYU.svg",
+    },
+    {
+      id: "Korea University Anam Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/KUM.s",
+    },
+    {
+      id: "Ewha Womans University Medical Center",
+      name: "Major Hospital",
+      logo: "/images/partners/EMC.jpg",
+    },
+    {
+      id: "Hallym University Medical Center",
+      name: "Major Hospital",
+      logo: "/images/partners/HUMC.jpeg",
+    },
+    {
+      id: "Inha University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/IUH.svg",
+    },
+    {
+      id: "Chung-Ang University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/CAU.jpeg",
+    },
+    {
+      id: "Soonchunhyang University Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/SCHU.png",
+    },
+    {
+      id: "Konkuk University Medical Center",
+      name: "Major Hospital",
+      logo: "/images/partners/KKMC.svg",
+    },
+    {
+      id: "Dongguk University Ilsan Hospital",
+      name: "Major Hospital",
+      logo: "/images/partners/DUMC.png",
+    },
+    {
+      id: "Gachon University Gil Medical Center",
+      name: "Major Hospital",
+      logo: "/images/partners/GUGMC.jpeg",
     },
   ];
 
   // Strategic Business Partners
   const businessPartners = [
-    { id: "sk", name: "SK C&C", logo: "/figma/e0be0c78cfee082066ac63ec3927b1ed9e0c8042.png" },
-    { id: "samsung", name: "Samsung Electronics", logo: "https://images.unsplash.com/photo-1758599543157-bc1a94fec33c?w=400" },
-    { id: "lg", name: "LG Electronics", logo: "https://images.unsplash.com/photo-1758599543157-bc1a94fec33c?w=400" },
-    { id: "hyundai", name: "Hyundai Motor Group", logo: "https://images.unsplash.com/photo-1758599543157-bc1a94fec33c?w=400" },
-    { id: "posco", name: "POSCO", logo: "https://images.unsplash.com/photo-1758599543157-bc1a94fec33c?w=400" },
+    {
+      id: "neurophet",
+      name: "Medical Equipment",
+      logo: "/images/partners/neurophet.png",
+    },
+    {
+      id: "INFINITT Healthcare",
+      name: "Cloud Platform",
+      logo: "/images/partners/INFINITT.jpg",
+    },
+    {
+      id: "SK C&C",
+      name: "Technology Partner",
+      logo: "/images/partners/SKC&C.png",
+    },
   ];
 
   // Financial Investors
   const investorPartners = [
-    { id: "kdb", name: "Korea Development Bank", logo: "https://images.unsplash.com/photo-1559067096-49ebca3406aa?w=400" },
-    { id: "kb", name: "KB Investment", logo: "https://images.unsplash.com/photo-1559067096-49ebca3406aa?w=400" },
-    { id: "mirae", name: "Mirae Asset", logo: "https://images.unsplash.com/photo-1559067096-49ebca3406aa?w=400" },
-    { id: "kic", name: "Korea Investment Corporation", logo: "https://images.unsplash.com/photo-1559067096-49ebca3406aa?w=400" },
-    { id: "smbc", name: "SMBC Venture Capital", logo: "https://images.unsplash.com/photo-1559067096-49ebca3406aa?w=400" },
+    {
+      id: "BIG BASIN CAPITAL",
+      name: "Strategic Investor",
+      logo: "/images/partners/VC_BBC.png",
+    },
+    {
+      id: "DIGITAL HEALTHCARE PARTNERS",
+      name: "Venture Capital",
+      logo: "/images/partners/VC_DHP.png",
+    },
+    {
+      id: "MASHUP VENTURES",
+      name: "Venture Capital",
+      logo: "/images/partners/VC_Mashup.png",
+    },
+    {
+      id: "MUREX PARTNERS",
+      name: "Strategic Investor",
+      logo: "/images/partners/VC_Murex.png",
+    },
   ];
 
   const handleViewAllPartners = () => {
@@ -120,13 +227,13 @@ export default function TrustSection({
             <div className="relative">
               {/* Background Glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl rounded-full" />
-              
+
               {/* Icon Container */}
               <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/30 flex items-center justify-center">
                 <Building2 className="w-8 h-8 text-purple-400" />
               </div>
             </div>
-            
+
             <div className="text-center">
               <h3 className="text-3xl">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
@@ -151,13 +258,13 @@ export default function TrustSection({
             <div className="relative">
               {/* Background Glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-green-500/20 blur-xl rounded-full" />
-              
+
               {/* Icon Container */}
               <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-green-500/10 backdrop-blur-sm border border-emerald-500/30 flex items-center justify-center">
                 <Handshake className="w-8 h-8 text-emerald-400" />
               </div>
             </div>
-            
+
             <div className="text-center">
               <h3 className="text-3xl">
                 <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -182,13 +289,13 @@ export default function TrustSection({
             <div className="relative">
               {/* Background Glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 blur-xl rounded-full" />
-              
+
               {/* Icon Container */}
               <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-teal-500/10 backdrop-blur-sm border border-cyan-500/30 flex items-center justify-center">
                 <TrendingUp className="w-8 h-8 text-cyan-400" />
               </div>
             </div>
-            
+
             <div className="text-center">
               <h3 className="text-3xl">
                 <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">

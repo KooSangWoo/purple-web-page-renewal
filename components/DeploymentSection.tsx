@@ -378,7 +378,7 @@ export default function DeploymentSection({
               {/* Image */}
               <div className="mb-12 max-w-3xl mx-auto">
                 <img
-                  src="/figma/8b9791f38d5638568f59f56466a7f988635b1d7c.png"
+                  src="/images/MASTER_INFARCT_251028.jpg"
                   alt="Brain Infarction detection"
                   className="w-full rounded-lg"
                 />

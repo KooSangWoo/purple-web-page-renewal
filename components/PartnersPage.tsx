@@ -44,12 +44,12 @@ export default function PartnersPage({ language }: PartnersPageProps) {
         {
           name: "Seoul National University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/SNUH.png",
+          filePath: "/images/partners/SNUH.jpg",
         },
         {
           name: "Ajou University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/AUH.png",
+          filePath: "/images/partners/AUH.svg",
         },
         {
           name: "Samsung Medical Center",
@@ -59,106 +59,134 @@ export default function PartnersPage({ language }: PartnersPageProps) {
         {
           name: "Severance Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/SEVERANCE_HOS.png",
         },
         {
           name: "Seoul St. Mary's Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/SCMC.png",
         },
         {
           name: "Bundang Seoul National University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/SNUBH.png",
+          filePath: "/images/partners/SNUBH.jpeg",
         },
         {
           name: "Gangnam Severance Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/GANGNAM_SEVERANCE_HOS.jpeg",
         },
         {
           name: "Kyungpook National University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/KNUH.jpg",
         },
         {
           name: "Chonnam National University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/CNUH.jpg",
         },
         {
           name: "Pusan National University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/PNUH.jpeg",
         },
         {
           name: "Chungnam National University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/CNU.svg",
         },
         {
           name: "Hanyang University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/HYU.svg",
         },
         {
           name: "Korea University Anam Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/KUM.s",
         },
         {
           name: "Ewha Womans University Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/EMC.jpg",
         },
         {
           name: "Hallym University Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/HUMC.jpeg",
         },
         {
           name: "Inha University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/IUH.svg",
         },
         {
           name: "Chung-Ang University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/CAU.jpeg",
         },
         {
           name: "Soonchunhyang University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/SCHU.png",
         },
         {
           name: "Konkuk University Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/KKMC.svg",
         },
         {
           name: "Dongguk University Ilsan Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/DUMC.png",
         },
         {
           name: "Gachon University Gil Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/GUGMC.jpeg",
         },
       ],
       // Strategic Business Partners (3 logos)
       strategic: [
-        { name: "Yuhan Medical", category: "Medical Equipment" },
-        { name: "Microsoft Azure", category: "Cloud Platform" },
-        { name: "SK C&C", category: "Technology Partner" },
+        {
+          name: "neurophet",
+          category: "Medical Equipment",
+          filePath: "/images/partners/neurophet.png",
+        },
+        {
+          name: "INFINITT Healthcare",
+          category: "Cloud Platform",
+          filePath: "/images/partners/INFINITT.jpg",
+        },
+        {
+          name: "SK C&C",
+          category: "Technology Partner",
+          filePath: "/images/partners/SKC&C.png",
+        },
       ],
       // Financial Investors (4 logos)
       investors: [
-        { name: "SK Group", category: "Strategic Investor" },
-        { name: "Korea Investment Partners", category: "Venture Capital" },
-        { name: "Mirae Asset Venture", category: "Venture Capital" },
-        { name: "KB Investment", category: "Strategic Investor" },
+        {
+          name: "BIG BASIN CAPITAL",
+          category: "Strategic Investor",
+          filePath: "/images/partners/VC_BBC.png",
+        },
+        {
+          name: "DIGITAL HEALTHCARE PARTNERS",
+          category: "Venture Capital",
+          filePath: "/images/partners/VC_DHP.png",
+        },
+        {
+          name: "MASHUP VENTURES",
+          category: "Venture Capital",
+          filePath: "/images/partners/VC_Mashup.png",
+        },
+        {
+          name: "MUREX PARTNERS",
+          category: "Strategic Investor",
+          filePath: "/images/partners/VC_Murex.png",
+        },
       ],
     },
     en: {
@@ -303,16 +331,44 @@ export default function PartnersPage({ language }: PartnersPageProps) {
       ],
       // Strategic Business Partners (3 logos)
       strategic: [
-        { name: "Yuhan Medical", category: "Medical Equipment" },
-        { name: "Microsoft Azure", category: "Cloud Platform" },
-        { name: "SK C&C", category: "Technology Partner" },
+        {
+          name: "neurophet",
+          category: "Medical Equipment",
+          filePath: "/images/partners/neurophet.png",
+        },
+        {
+          name: "INFINITT Healthcare",
+          category: "Cloud Platform",
+          filePath: "/images/partners/INFINITT.jpg",
+        },
+        {
+          name: "SK C&C",
+          category: "Technology Partner",
+          filePath: "/images/partners/SKC&C.png",
+        },
       ],
       // Financial Investors (4 logos)
       investors: [
-        { name: "SK Group", category: "Strategic Investor" },
-        { name: "Korea Investment Partners", category: "Venture Capital" },
-        { name: "Mirae Asset Venture", category: "Venture Capital" },
-        { name: "KB Investment", category: "Strategic Investor" },
+        {
+          name: "BIG BASIN CAPITAL",
+          category: "Strategic Investor",
+          filePath: "/images/partners/VC_BBC.png",
+        },
+        {
+          name: "DIGITAL HEALTHCARE PARTNERS",
+          category: "Venture Capital",
+          filePath: "/images/partners/VC_DHP.png",
+        },
+        {
+          name: "MASHUP VENTURES",
+          category: "Venture Capital",
+          filePath: "/images/partners/VC_Mashup.png",
+        },
+        {
+          name: "MUREX PARTNERS",
+          category: "Strategic Investor",
+          filePath: "/images/partners/VC_Murex.png",
+        },
       ],
     },
   };
@@ -465,6 +521,7 @@ export default function PartnersPage({ language }: PartnersPageProps) {
                 key={index}
                 name={partner.name}
                 category={partner.category}
+                imagePath={partner.filePath}
                 large={true}
               />
             ))}
