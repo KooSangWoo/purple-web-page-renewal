@@ -198,12 +198,12 @@ export default function PartnersPage({ language }: PartnersPageProps) {
         {
           name: "Seoul National University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/SNUH.png",
+          filePath: "/images/partners/SNUH.jpg",
         },
         {
           name: "Ajou University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/AUH.png",
+          filePath: "/images/partners/AUH.svg",
         },
         {
           name: "Samsung Medical Center",
@@ -223,7 +223,7 @@ export default function PartnersPage({ language }: PartnersPageProps) {
         {
           name: "Bundang Seoul National University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/SNUBH.png",
+          filePath: "/images/partners/SNUBH.jpeg",
         },
         {
           name: "Gangnam Severance Hospital",
@@ -233,17 +233,17 @@ export default function PartnersPage({ language }: PartnersPageProps) {
         {
           name: "Kyungpook National University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/KNUH.png",
+          filePath: "/images/partners/KNUH.jpg",
         },
         {
           name: "Chonnam National University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/CNUH.png",
+          filePath: "/images/partners/CNUH.jpg",
         },
         {
           name: "Pusan National University Hospital",
           category: "Major Hospital",
-          filePath: "/images/partners/PNUH.png",
+          filePath: "/images/partners/PNUH.jpeg",
         },
         {
           name: "Chungnam National University Hospital",
@@ -263,42 +263,42 @@ export default function PartnersPage({ language }: PartnersPageProps) {
         {
           name: "Ewha Womans University Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/EMC.jpg",
         },
         {
           name: "Hallym University Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/HUMC.jpeg",
         },
         {
           name: "Inha University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/IUH.svg",
         },
         {
           name: "Chung-Ang University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/CAU.jpeg",
         },
         {
           name: "Soonchunhyang University Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/SCHU.png",
         },
         {
           name: "Konkuk University Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/KKMC.svg",
         },
         {
           name: "Dongguk University Ilsan Hospital",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/DUMC.png",
         },
         {
           name: "Gachon University Gil Medical Center",
           category: "Major Hospital",
-          filePath: "",
+          filePath: "/images/partners/GUGMC.jpeg",
         },
       ],
       // Strategic Business Partners (3 logos)
@@ -348,7 +348,9 @@ export default function PartnersPage({ language }: PartnersPageProps) {
           />
           <ImageWithFallback src={imagePath} alt="logoImage" />
         </div>
-        <h3 className={`text-white mb-2 ${large ? "" : "text-sm"}`}>{name}</h3>
+        <h3 className={`text-white mb-2 ${large ? "h-14" : "h-10 text-sm"}`}>
+          {name}
+        </h3>
         <span className="text-purple-400 text-xs px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20">
           {category}
         </span>
