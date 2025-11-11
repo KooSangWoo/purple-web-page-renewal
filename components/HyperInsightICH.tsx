@@ -251,6 +251,15 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
 
                 {/* 2. QR 코드 이미지 (오른쪽 끝에 배치) */}
                 <Image
+                  src="/images/FDA.png"
+                  alt="Purple AI"
+                  width={400}
+                  height={1}
+                  className="h-20 w-34 rounded-xl mr-4"
+                />
+
+                {/* 2. QR 코드 이미지 (오른쪽 끝에 배치) */}
+                <Image
                   src="/images/ich_eLabel_comment.png"
                   alt="Purple AI"
                   width={400}
@@ -606,6 +615,13 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                   <div className="mt-2 pb-6 border-b border-purple-500/30 w-full"></div>
                 </div>
 
+                <Image
+                  src="/images/FDA.png"
+                  alt="Purple AI"
+                  width={400}
+                  height={1}
+                  className="h-20 w-34 rounded-xl mr-4"
+                />
                 {/* 2. QR 코드 이미지 (오른쪽 끝에 배치) */}
                 <Image
                   src="/images/MFDS.png"
