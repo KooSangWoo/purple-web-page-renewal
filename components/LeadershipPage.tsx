@@ -168,17 +168,11 @@ export default function LeadershipPage({ language }: LeadershipPageProps) {
           <div className="grid md:grid-cols-2 gap-8">
             {t.leaders.map((leader, index) => {
               const TitleIcon = getTitleIcon(leader.title);
-              const gradientColors =
-                index % 2 === 0
-                  ? "from-purple-500 to-purple-700"
-                  : "from-cyan-500 to-cyan-700";
+              const gradientColors = "from-purple-500 to-purple-700";
               const borderColor =
-                index % 2 === 0
-                  ? "border-purple-500/20 hover:border-purple-500/40"
-                  : "border-cyan-500/20 hover:border-cyan-500/40";
-              const textColor =
-                index % 2 === 0 ? "text-purple-400" : "text-cyan-400";
-
+                "border-purple-500/20 hover:border-purple-500/40";
+              const textColor = "text-purple-400";
+              const choiClassName = index == 3 ? "scale-[1.3]" : "";
               return (
                 <div
                   key={index}
@@ -195,7 +189,7 @@ export default function LeadershipPage({ language }: LeadershipPageProps) {
                           <ImageWithFallback
                             src={leader.image}
                             alt={leader.name}
-                            className="w-full h-full object-cover"
+                            className={`w-full h-full ${choiClassName}  object-cover`}
                           />
                         </div>
                         {/* Title Badge */}
@@ -227,9 +221,7 @@ export default function LeadershipPage({ language }: LeadershipPageProps) {
                           className="flex items-start gap-3 text-white/70 text-sm"
                         >
                           <div
-                            className={`w-1.5 h-1.5 rounded-full ${
-                              index % 2 === 0 ? "bg-purple-400" : "bg-cyan-400"
-                            } flex-shrink-0 mt-2`}
+                            className={`w-1.5 h-1.5 rounded-full ${"bg-purple-400"} flex-shrink-0 mt-2`}
                           ></div>
                           <span className="leading-relaxed">{credential}</span>
                         </div>
