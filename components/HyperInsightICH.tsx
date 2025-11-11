@@ -111,12 +111,12 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
             <div className="bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-xl rounded-3xl border border-purple-500/20 overflow-hidden hover:border-purple-500/40 transition-all">
               <div className="p-8">
                 {/* Label Badge */}
-                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 mb-6">
+                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 ml-6">
                   <span className="text-purple-300">{t.worklist.label}</span>
                 </div>
 
                 {/* Image Container */}
-                <div className="bg-black/40 rounded-2xl mb-6 aspect-[4/3] overflow-hidden">
+                <div className="bg-black/40 rounded-2xl m-6 aspect-[4/3] overflow-hidden">
                   <ImageWithFallback
                     src="/images/ich_worklist.png"
                     alt="Worklist Interface"
@@ -125,7 +125,7 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-orange-400">{t.worklist.title}</h3>
+                <h3 className="text-orange-400 ml-6">{t.worklist.title}</h3>
               </div>
             </div>
 
@@ -133,12 +133,12 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
             <div className="bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-xl rounded-3xl border border-purple-500/20 overflow-hidden hover:border-purple-500/40 transition-all">
               <div className="p-8">
                 {/* Label Badge */}
-                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 mb-6">
+                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 ml-6">
                   <span className="text-purple-300">{t.viewer.label}</span>
                 </div>
 
                 {/* Image Container */}
-                <div className="bg-black/40 rounded-2xl mb-6 aspect-[4/3] overflow-hidden ">
+                <div className="bg-black/40 rounded-2xl m-6 aspect-[4/3] overflow-hidden ">
                   <ImageWithFallback
                     src="/images/MASTER_HEMORRAGE_251028.jpg"
                     alt="CT Scan Viewer"
@@ -147,7 +147,7 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-orange-400">{t.viewer.title}</h3>
+                <h3 className="text-orange-400 ml-6">{t.viewer.title}</h3>
               </div>
             </div>
 
@@ -155,12 +155,12 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
             <div className="bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-xl rounded-3xl border border-purple-500/20 overflow-hidden hover:border-purple-500/40 transition-all">
               <div className="p-8">
                 {/* Label Badge */}
-                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 mb-6">
+                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 ml-6">
                   <span className="text-purple-300">{t.report.label}</span>
                 </div>
 
                 {/* Image Container */}
-                <div className="bg-black/40 rounded-2xl mb-6 aspect-[4/3] overflow-hidden">
+                <div className="bg-black/40 rounded-2xl m-6 aspect-[4/3] overflow-hidden">
                   <ImageWithFallback
                     src="/images/report_brain_hemorrhage.png"
                     alt="Medical Report"
@@ -169,7 +169,7 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-orange-400">{t.report.title}</h3>
+                <h3 className="text-orange-400 ml-6">{t.report.title}</h3>
               </div>
             </div>
 
@@ -177,12 +177,12 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
             <div className="bg-gradient-to-br from-purple-900/10 to-cyan-900/10 backdrop-blur-xl rounded-3xl border border-purple-500/20 overflow-hidden hover:border-purple-500/40 transition-all">
               <div className="p-8">
                 {/* Label Badge */}
-                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 mb-6">
+                <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 ml-6">
                   <span className="text-purple-300">{t.mobile.label}</span>
                 </div>
 
                 {/* Image Container */}
-                <div className="flex bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
+                <div className="flex bg-black/40 rounded-2xl p-4 m-6 aspect-[4/3]">
                   <ImageWithFallback
                     src="/images/mobile_1.jpg"
                     alt="Mobile Medical App"
@@ -196,7 +196,7 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-orange-400">{t.mobile.title}</h3>
+                <h3 className="text-orange-400 ml-6">{t.mobile.title}</h3>
               </div>
             </div>
           </div>
@@ -591,11 +591,30 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
           {activeTab === "korea" && (
             <div className="space-y-12">
               {/* Korea Clinical Validation Header */}
-              <div className="flex items-center gap-4 pb-6 border-b border-purple-500/30">
-                <span className="text-4xl">🇰🇷</span>
-                <h2 className="text-purple-400">KOREA CLINICAL VALIDATION</h2>
-              </div>
+              <div className="flex flex-row justify-between items-center w-full">
+                {/* 1. 이 div가 QR 코드까지의 모든 공간을 차지하며, 밑줄이 적용됩니다. */}
+                <div className="flex flex-col w-full pr-8">
+                  {" "}
+                  {/* w-full로 최대한 확장하고, pr-8로 QR코드와 간격 확보 */}
+                  {/* 텍스트 영역 */}
+                  <div className="flex items-center gap-4">
+                    <span className="text-4xl">🇰🇷</span>
+                    <h2 className="text-purple-400">
+                      KOREA CLINICAL VALIDATION
+                    </h2>
+                  </div>
+                  <div className="mt-2 pb-6 border-b border-purple-500/30 w-full"></div>
+                </div>
 
+                {/* 2. QR 코드 이미지 (오른쪽 끝에 배치) */}
+                <Image
+                  src="/images/MFDS.png"
+                  alt="Purple AI"
+                  width={400}
+                  height={1}
+                  className="h-20 w-34 rounded-xl"
+                />
+              </div>
               {/* Description */}
               <p className="text-white/70 leading-relaxed">
                 AI assistance improved diagnostic accuracy across all clinician
