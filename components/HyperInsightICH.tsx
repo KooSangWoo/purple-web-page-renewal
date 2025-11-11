@@ -116,11 +116,11 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Image Container */}
-                <div className="bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
+                <div className="bg-black/40 rounded-2xl mb-6 aspect-[4/3] overflow-hidden">
                   <ImageWithFallback
                     src="/images/ich_worklist.png"
                     alt="Worklist Interface"
-                    className="w-full h-full object-contain rounded-xl"
+                    className="w-full h-full object-fill rounded-xl"
                   />
                 </div>
 
@@ -138,11 +138,11 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Image Container */}
-                <div className="bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
+                <div className="bg-black/40 rounded-2xl mb-6 aspect-[4/3] overflow-hidden ">
                   <ImageWithFallback
                     src="/images/MASTER_HEMORRAGE_251028.jpg"
                     alt="CT Scan Viewer"
-                    className="w-full h-full object-contain rounded-xl"
+                    className="w-full h-full object-fill rounded-xl"
                   />
                 </div>
 
@@ -160,11 +160,11 @@ export default function HyperInsightICH({ language }: HyperInsightICHProps) {
                 </div>
 
                 {/* Image Container */}
-                <div className="bg-black/40 rounded-2xl p-4 mb-6 aspect-[4/3]">
+                <div className="bg-black/40 rounded-2xl mb-6 aspect-[4/3] overflow-hidden">
                   <ImageWithFallback
                     src="/images/report_brain_hemorrhage.png"
                     alt="Medical Report"
-                    className="w-full h-full object-contain rounded-xl"
+                    className="w-full h-full object-fill rounded-xl"
                   />
                 </div>
 
